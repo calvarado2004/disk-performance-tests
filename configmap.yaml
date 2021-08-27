@@ -5,7 +5,8 @@ metadata:
   namespace: perf 
 data: 
   fiojobs.fio: |- 
-    ##making this fio file as place holder for new config [global] 
+    ##making this fio file as place holder for new config
+    [global] 
     ioengine=libaio 
     size=1GiB 
     name=test 
@@ -17,8 +18,8 @@ data:
     blocksize=64k 
     filename=/data/fio.dat 
     readwrite=write 
-    buffer_compress_percentage=50 
-    end_fsync=1 
+    buffer_compress_percentage=50 end_fsync=1
+
     [64k-read] 
     stonewall 
     blocksize=64k 
@@ -30,8 +31,7 @@ data:
     blocksize=64k 
     filename=/data/fio.dat 
     readwrite=randwrite 
-    buffer_compress_percentage=50 
-    end_fsync=1
+    buffer_compress_percentage=50 end_fsync=1
  
     [64k-rand-read] 
     stonewall 
