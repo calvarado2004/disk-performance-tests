@@ -11,53 +11,60 @@ data:
     size=1GiB 
     name=test 
     direct=1 
-    iodepth=128 
+    iodepth=128
+ 
     ##----Begin 64k tests------- 
     [64k-write] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio.dat 
+    filename=/data/fio1.dat 
     readwrite=write 
-    buffer_compress_percentage=50 end_fsync=1
+    buffer_compress_percentage=50
+    end_fsync=1
 
     [64k-read] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio.dat 
+    filename=/data/fio2.dat 
     readwrite=read
  
     [64k-rand-write] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio.dat 
+    filename=/data/fio3.dat 
     readwrite=randwrite 
-    buffer_compress_percentage=50 end_fsync=1
+    buffer_compress_percentage=50
+    end_fsync=1
  
     [64k-rand-read] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio.dat 
-    readwrite=randread 
+    filename=/data/fio4.dat 
+    readwrite=randread
+ 
     [64k-mix-rand-50-50] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio.dat 
+    filename=/data/fio5.dat 
     readwrite=randrw 
     rwmixread=50
-    buffer_compress_percentage=50 end_fsync=1
+    buffer_compress_percentage=50
+    end_fsync=1
  
     [64k-mix-rand-80-20] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio.dat 
+    filename=/data/fio6.dat 
     readwrite=randrw 
     rwmixread=80 
-    buffer_compress_percentage=50 end_fsync=1
+    buffer_compress_percentage=50
+    end_fsync=1
  
     [64k-mix-rand-20-80] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio.dat 
+    filename=/data/fio7.dat 
     readwrite=randrw 
     rwmixread=20 
-    buffer_compress_percentage=50 end_fsync=1 
+    buffer_compress_percentage=50
+    end_fsync=1 
