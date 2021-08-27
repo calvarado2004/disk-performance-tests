@@ -1,5 +1,7 @@
 # disk-performance-tests
 
+If you want to get the baseline performance of your Portworx cluster installed on Kubernetes or OpenShift you can perform the following: 
+
 ```
 kubectl create ns perf 
 
@@ -17,7 +19,8 @@ kubectl exec -it -n perf fio-repl1 -- rm -rf /data/fio.dat
 ```
 Perform that test like 10 times to get a good average of your IOPS
 
-
+For example, on a EKS cluster with a GP3 disks Portworx 2.8 cluster:
+ 
 ```
 test: (g=0): rw=read, bs=64.0KiB-64.0KiB,64.0KiB-64.0KiB,64.0KiB-64.0KiB, ioengine=libaio, iodepth=128
 fio-2.17-45-g06cb
