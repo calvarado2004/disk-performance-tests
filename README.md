@@ -13,9 +13,9 @@ kubectl create -f configmap.yaml -n perf
 
 kubectl create -f fio-pod.yaml -n perf
 
-kubectl exec -it -n perf fio-repl1 -- /usr/local/bin/fio --blocksize=64k --filename=/data/fio.dat --ioengine=libaio --readwrite=read --size=10G --name=test --direct=1 --iodepth=128 --end_fsync=1 /fiocfg/fiojobs.fio
+kubectl exec -it -n perf fio-repl1 -- /usr/local/bin/fio --blocksize=64k --filename=/data/fio01.dat --ioengine=libaio --readwrite=read --size=10G --name=test --direct=1 --iodepth=128 --end_fsync=1 /fiocfg/fiojobs.fio
 
-kubectl exec -it -n perf fio-repl1 -- rm -rf /data/fio.dat
+kubectl exec -it -n perf fio-repl1 -- rm -rf /data/fio01.dat && rm -rf /data/fio02.dat && rm -rf /data/fio03.dat && rm -rf /data/fio04.dat && rm -rf /data/fio05.dat && rm -rf /data/fio06.dat && rm -rf /data/fio07.dat && rm -rf /data/fio08.dat
 ```
 Perform that test like 10 times to get a good average of your IOPS
 

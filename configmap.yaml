@@ -17,7 +17,7 @@ data:
     [64k-write] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio1.dat 
+    filename=/data/fio02.dat 
     readwrite=write 
     buffer_compress_percentage=50
     end_fsync=1
@@ -25,13 +25,13 @@ data:
     [64k-read] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio2.dat 
+    filename=/data/fio03.dat 
     readwrite=read
  
     [64k-rand-write] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio3.dat 
+    filename=/data/fio04.dat 
     readwrite=randwrite 
     buffer_compress_percentage=50
     end_fsync=1
@@ -39,13 +39,13 @@ data:
     [64k-rand-read] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio4.dat 
+    filename=/data/fio05.dat 
     readwrite=randread
  
     [64k-mix-rand-50-50] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio5.dat 
+    filename=/data/fio06.dat 
     readwrite=randrw 
     rwmixread=50
     buffer_compress_percentage=50
@@ -54,7 +54,7 @@ data:
     [64k-mix-rand-80-20] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio6.dat 
+    filename=/data/fio07.dat 
     readwrite=randrw 
     rwmixread=80 
     buffer_compress_percentage=50
@@ -63,7 +63,7 @@ data:
     [64k-mix-rand-20-80] 
     stonewall 
     blocksize=64k 
-    filename=/data/fio7.dat 
+    filename=/data/fio08.dat 
     readwrite=randrw 
     rwmixread=20 
     buffer_compress_percentage=50
