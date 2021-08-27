@@ -13,7 +13,7 @@ kubectl create -f configmap.yaml -n perf
 
 kubectl create -f fio-pod.yaml -n perf
 
-kubectl exec -it -n perf fio-repl1 -- /usr/local/bin/fio --blocksize=64k --filename=/data/fio.dat --ioengine=libaio --readwrite=read --size=10G --name=test --direct=1 --iodepth=128 --end_fsync=1
+kubectl exec -it -n perf fio-repl2 -- /usr/local/bin/fio --blocksize=64k --filename=/data/fio.dat --ioengine=libaio --readwrite=read --size=10G --name=test --direct=1 --iodepth=128 --end_fsync=1 /fiocfg/fiojobs.fio
 
 kubectl exec -it -n perf fio-repl1 -- rm -rf /data/fio.dat
 ```
