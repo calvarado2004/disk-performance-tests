@@ -1,0 +1,13 @@
+kind: PersistentVolumeClaim 
+apiVersion: v1 
+metadata: 
+  name: fio-repl1-pvc 
+  namespace: perf 
+spec: 
+  accessModes: 
+  - ReadWriteOnce 
+  volumeMode: Filesystem 
+  resources: 
+    requests: 
+      storage: 20Gi 
+  storageClassName: fio-repl1
