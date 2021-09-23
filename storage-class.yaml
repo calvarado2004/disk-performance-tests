@@ -8,3 +8,5 @@ parameters:
   io_priority: "high" 
   cow_ondemand: "true" 
   allowVolumeExpansion: "true"
+  disable_io_profile_protection: "1"
+  io_profile: "db_remote"
